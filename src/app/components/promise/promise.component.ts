@@ -6,40 +6,68 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./promise.component.css']
 })
 export class PromiseComponent implements OnInit{
-  responseMsg: any;
-  ngOnInit(): void {
-    
+  result1: any;
+  result2: any;
+  result3: any;
+  ngOnInit(): void {}
+  lenovo = {
+      brand: 'Lenovo',
+      hdd: '1 TB',
+      color: 'Black'
   }
-  Lenovo(){
+  dell = {
+    brand: 'Dell',
+    hdd: '2 TB',
+    color: 'Gray'
+}
+  notAvailable = {
+      brand: 'Not Available',
+      status: 'Fail'
+  }
+
+  lenovoAvailable(){
     return true
   }
-  Dell(){
+  DellAvailable(){
     return false
   }
-  None(){
-    return 'Not Available'
-  }
- 
-
-  buyLaptop(){
-    let   myLaptop =  new Promise((resolve, reject) => {
-    if(this.Lenovo()){
+  myLaptop =  new Promise((resolve, reject) => {
+    if(this.lenovoAvailable()){
         return setTimeout(()=>{
-          resolve('Lenovo is Availble')
+          resolve(this.lenovo)
         }, 2000)
       }
-      else if(this.Dell()){
+      else if(this.DellAvailable()){
         return setTimeout(()=>{
-          resolve('Dell is Availble')
+          resolve(this.dell)
         }, 2000)
       }
       else{
-        return reject(this.None())
+        return reject(this.notAvailable)
       }
     })
-
-    myLaptop.then(res => this.responseMsg= res).catch(res => this.responseMsg = res)
+ 
+ //with Promise
+  promise(){
+    this.myLaptop.then(res => this.result1= res).catch(res => this.result1 = res)
   }
+  
+//with Async/await
+  async asyncAwait(){
+    this.result2 = await this.myLaptop
+  }
+  
+//FetchAPI
+fetchAPI(){
+  let url = fetch('../../../assets/data/data.json')
+  .then(res => res.json())
+  url.then(res => {
+    this.result3 = res[0]
+    console.log(this.result3) 
+   })
+
+}
+
 
 
 }
