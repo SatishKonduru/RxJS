@@ -5,12 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PromiseComponent } from './components/promise/promise.component';
+import { ObservableComponent } from './components/observable/observable.component';
+import { ObsListComponent } from './components/observable/obs-list/obs-list.component';
+import { FromEventComponent } from './components/observable/from-event/from-event.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PromiseComponent
+    PromiseComponent,
+    ObservableComponent,
+    ObsListComponent,
+    FromEventComponent
   ],
   imports: [
     BrowserModule,
