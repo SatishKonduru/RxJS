@@ -8,6 +8,8 @@ import { PromiseComponent } from './components/promise/promise.component';
 import { ObservableComponent } from './components/observable/observable.component';
 import { ObsListComponent } from './components/observable/obs-list/obs-list.component';
 import { FromEventComponent } from './components/observable/from-event/from-event.component';
+import { IntervalComponent } from './components/observable/interval/interval.component';
+import { UitilityService } from './services/uitility.service';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,16 @@ import { FromEventComponent } from './components/observable/from-event/from-even
     PromiseComponent,
     ObservableComponent,
     ObsListComponent,
-    FromEventComponent
+    FromEventComponent,
+    IntervalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    UitilityService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

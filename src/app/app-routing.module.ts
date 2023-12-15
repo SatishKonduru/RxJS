@@ -4,6 +4,7 @@ import { PromiseComponent } from './components/promise/promise.component';
 import { ObservableComponent } from './components/observable/observable.component';
 import { ObsListComponent } from './components/observable/obs-list/obs-list.component';
 import { FromEventComponent } from './components/observable/from-event/from-event.component';
+import { IntervalComponent } from './components/observable/interval/interval.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,10 @@ const routes: Routes = [
       {
         path: 'fromEvent',
         component: FromEventComponent
+      },
+      {
+        path: 'interval',
+        component: IntervalComponent
       }
     ]
   }

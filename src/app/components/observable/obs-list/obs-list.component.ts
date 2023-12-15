@@ -12,4 +12,8 @@ export class ObsListComponent {
   fromEvent(){
     this._router.navigate(['/observable/fromEvent'])
   }
+
+  interval(){
+    this._router.navigate(['/observable/interval'])
+  }
 }
