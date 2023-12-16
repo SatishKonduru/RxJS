@@ -21,65 +21,52 @@ export class OfFromComponent {
 
   //of with arguments
   ofWithArguments(){
-    this.ofArg()
-  }
-  ofArg(){
     const obs$ = of('Angular', 'React', 'Vue')
     obs$.subscribe(res => {
       this._utilityService.display(res,'ofWithArguments')
     })
   }
-
+ 
   //of with Object
   ofWithObject(){
-    this.ofObj()
-  }
-  ofObj(){
     const obs$ = of({x:'Angular', y:'React', z: 'Vue'})
     obs$.subscribe(res => {
       this.responseMsg = res
     })
   }
+  
 
   //from with Array
   fromArray(){
-    this.fromWithArray()
-  }
-  fromWithArray(){
     const obs$ = from(['Angular','React','Vue'])
     obs$.subscribe(res => {
       this._utilityService.display(res, 'fromWithArray')
     })
   }
+  
 
 //from with Promise
-fromPromise(){
-  this.fromWithPromise()
-}
 promise = new Promise((resolve) => {
   setTimeout(()=>{
     resolve("Promise Resolved.")
   }, 3000)
 })
-fromWithPromise(){
+fromPromise(){
   const obs$ = from(this.promise)
   obs$.subscribe(res => {
     this._utilityService.display(res, 'fromWithPromise')
   })
 }
 
+
 //from with String
 fromString(){
-  this.fromWithString()
-}
-fromWithString(){
   const obs$ = from("RSK Helpline")
   obs$.subscribe(res => {
     this._utilityService.display(res, 'fromWithString')
   })
-  
-
 }
+
 
 
 }
