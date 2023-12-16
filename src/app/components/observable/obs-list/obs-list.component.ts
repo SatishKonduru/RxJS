@@ -16,4 +16,8 @@ export class ObsListComponent {
   interval(){
     this._router.navigate(['/observable/interval'])
   }
+
+  ofFrom(){
+    this._router.navigate(['/observable/ofFrom'])
+  }
 }

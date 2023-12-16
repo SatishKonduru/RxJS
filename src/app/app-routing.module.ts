@@ -5,6 +5,7 @@ import { ObservableComponent } from './components/observable/observable.componen
 import { ObsListComponent } from './components/observable/obs-list/obs-list.component';
 import { FromEventComponent } from './components/observable/from-event/from-event.component';
 import { IntervalComponent } from './components/observable/interval/interval.component';
+import { OfFromComponent } from './components/observable/of-from/of-from.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
       {
         path: 'interval',
         component: IntervalComponent
+      },
+      {
+        path: 'ofFrom',
+        component: OfFromComponent
       }
     ]
   }

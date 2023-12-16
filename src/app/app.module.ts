@@ -10,6 +10,7 @@ import { ObsListComponent } from './components/observable/obs-list/obs-list.comp
 import { FromEventComponent } from './components/observable/from-event/from-event.component';
 import { IntervalComponent } from './components/observable/interval/interval.component';
 import { UitilityService } from './services/uitility.service';
+import { OfFromComponent } from './components/observable/of-from/of-from.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UitilityService } from './services/uitility.service';
     ObservableComponent,
     ObsListComponent,
     FromEventComponent,
-    IntervalComponent
+    IntervalComponent,
+    OfFromComponent
   ],
   imports: [
     BrowserModule,
