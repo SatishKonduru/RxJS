@@ -11,6 +11,7 @@ import { FromEventComponent } from './components/observable/from-event/from-even
 import { IntervalComponent } from './components/observable/interval/interval.component';
 import { UitilityService } from './services/uitility.service';
 import { OfFromComponent } from './components/observable/of-from/of-from.component';
+import { ToArrayComponent } from './components/observable/to-array/to-array.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { OfFromComponent } from './components/observable/of-from/of-from.compone
     ObsListComponent,
     FromEventComponent,
     IntervalComponent,
-    OfFromComponent
+    OfFromComponent,
+    ToArrayComponent
   ],
   imports: [
     BrowserModule,

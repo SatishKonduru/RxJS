@@ -20,4 +20,8 @@ export class ObsListComponent {
   ofFrom(){
     this._router.navigate(['/observable/ofFrom'])
   }
+
+  toArray(){
+    this._router.navigate(['/observable/toArray'])
+  }
 }

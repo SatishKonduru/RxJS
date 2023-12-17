@@ -6,6 +6,7 @@ import { ObsListComponent } from './components/observable/obs-list/obs-list.comp
 import { FromEventComponent } from './components/observable/from-event/from-event.component';
 import { IntervalComponent } from './components/observable/interval/interval.component';
 import { OfFromComponent } from './components/observable/of-from/of-from.component';
+import { ToArrayComponent } from './components/observable/to-array/to-array.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,10 @@ const routes: Routes = [
       {
         path: 'ofFrom',
         component: OfFromComponent
+      },
+      {
+        path: 'toArray',
+        component: ToArrayComponent
       }
     ]
   }
